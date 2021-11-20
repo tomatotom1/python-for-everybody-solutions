@@ -33,7 +33,7 @@ except FileNotFoundError:
 for line in fhand:
     line = line.rstrip()
     rev_temp = re.findall('^New Revision: ([0-9.]+)', line)
-    if not rev_temp:
+    if rev_temp:
         for val in rev_temp:
             val = float(val)            # Convert the strings to floats
             rev = rev + [val]           # Concats new values
